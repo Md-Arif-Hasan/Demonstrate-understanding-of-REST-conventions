@@ -24,8 +24,8 @@ This project is built using React for the fronten by using vite, and Tailwind CS
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/Md-Arif-Hasan/Kontinentalist_frontend
-    cd Kontinentalist_frontend
+    git clone https://github.com/Md-Arif-Hasan/Web-Application-Development.git
+    cd Web-Application-Development
     ```
 
 2. **Install dependencies using npm:**
