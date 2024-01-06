@@ -1,4 +1,5 @@
-# Kontinentalist_frontend
+# Demonstrate understanding of REST conventions
+
 Frontend part of the coding challange
 
 
