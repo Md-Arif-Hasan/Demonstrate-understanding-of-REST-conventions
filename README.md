@@ -1,6 +1,6 @@
 # Demonstrate understanding of REST conventions
 
-Backend part of the coding challange
+
 
 
 # Simple Stories List Page
