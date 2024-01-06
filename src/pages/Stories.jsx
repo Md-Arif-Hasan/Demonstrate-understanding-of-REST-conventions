@@ -3,6 +3,7 @@ import parse from 'html-react-parser';
 import Card from '../components/Card';
 import { getAllStories } from "../../services/Stories";
 import './stories.css';
+import HeroSection from '../components/HeroSection';
 
 const StoryDetail = () => {
     const [story, setStory] = useState([]);
@@ -10,7 +11,7 @@ const StoryDetail = () => {
     const [pageNumber, setPageNumber] = useState(1);
 
     useEffect(() => {
-        const fetchStory = async (pageNumber) => {
+        const fetchStory = async () => {
             try {
                 const response = await getAllStories(pageNumber);
                 const newStories = response.data.data || [];
@@ -28,41 +29,15 @@ const StoryDetail = () => {
 
 
     const setNewPage = (pageNumber) => {
+        console.log(pageNumber);
         setPageNumber(pageNumber + 1);
     }
 
     return (
 
         <div>
-
-            <div className="flex h-half-screen relative">
-                <div className="flex-1 relative">
-
-                    <img src="src/assets/air.png" className="object-cover h-full w-full" alt="Cover" />
-
-
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                        <h1 className="text-4xl font-bold mb-2">KONTINENTALIST</h1>
-                        <p className="text-lg mb-1">We tell data stories about Asia</p>
-
-
-                        <div className="flex items-center justify-center mt-2">
-                            <a href="https://www.linkedin.com/company/kontinentalist/" target="_blank" rel="noopener noreferrer" className="text-lg mr-2">🔗</a>
-                            <a href="https://kontinentalist.com/" target="_blank" rel="noopener noreferrer" className="text-lg">🌐</a>
-                        </div>
-
-                        <p className="text-lg mt-4">
-                            An informed Asia at the front of global conversations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-
-
-
             <div className='flex flex-col justify-center items-center'>
-
+                <HeroSection />
 
                 {story.length > 0 ? (
                     <>
